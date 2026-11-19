@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Executive Summary
+##  Executive Summary
 
 **SHAKTI SETU AI** is an intelligent Agentic AI platform designed to transform traditional Women’s Self-Help Groups (SHGs) into organized, digitally empowered micro-enterprises. It eliminates order fulfillment chaos, builds member trust through transparent cryptographic revenue sharing, provides safe delivery escorts for rural women, and unlocks sustainable gig employment for rural youth as **Digital Saathis**.
 
@@ -98,7 +98,7 @@ Simply double-click `run_demo.bat` inside this folder, or run in PowerShell:
 # In terminal:
 python server/main.py
 ```
-Then open your browser at: **[http://localhost:8000](http://localhost:8000)**
+Then open your browser at: https://shakti-setu-ai.onrender.com/
 
 ### Option C: Run Standalone Web App (No dependencies required)
 Simply open `client/index.html` in any web browser (Chrome, Edge, Firefox)!
