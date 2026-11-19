@@ -1,0 +1,112 @@
+/* SHAKTI SETU AI - Modern Rural Tech Styling */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&display=swap');
+
+:root {
+  --primary: #ea580c; /* Saffron / Marigold warm orange */
+  --primary-dark: #c2410c;
+  --secondary: #0d9488; /* Forest / Teal empowering green */
+  --accent: #f59e0b; /* Golden harvest */
+  --danger: #dc2626;
+  --bg-gradient: linear-gradient(135deg, #fdf8f4 0%, #fef3c7 40%, #f0fdfa 100%);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --border-subtle: #fed7aa;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: #1e293b;
+}
+
+.brand-font {
+  font-family: 'Rozha One', serif, 'Plus Jakarta Sans';
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(254, 215, 170, 0.6);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -5px rgba(234, 88, 12, 0.12);
+}
+
+/* Voice Wave Animation */
+.voice-wave {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+}
+
+.voice-wave span {
+  display: block;
+  width: 4px;
+  background: var(--primary);
+  border-radius: 9999px;
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.voice-wave span:nth-child(2) { animation-delay: 0.15s; }
+.voice-wave span:nth-child(3) { animation-delay: 0.3s; }
+.voice-wave span:nth-child(4) { animation-delay: 0.45s; }
+
+@keyframes wave {
+  0%, 100% { height: 6px; }
+  50% { height: 26px; }
+}
+
+/* Emergency Pulse */
+.emergency-pulse {
+  animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+}
+
+/* Agent Node Glow */
+.agent-node {
+  background: white;
+  border: 2px solid #fdba74;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.agent-node.active-agent {
+  border-color: #ea580c;
+  box-shadow: 0 0 20px rgba(234, 88, 12, 0.35);
+  transform: scale(1.03);
+}
+
+/* Audio button custom ring */
+.mic-btn {
+  background: linear-gradient(135deg, #ea580c, #f59e0b);
+  transition: all 0.2s ease;
+}
+.mic-btn:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+.mic-btn:active {
+  transform: scale(0.97);
+}
+
+/* Ledger Receipt */
+.receipt-paper {
+  background: #ffffff;
+  border-left: 5px solid var(--secondary);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
