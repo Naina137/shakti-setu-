@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHAKTI SETU AI | Rural Women Entrepreneurship & Safe Fulfilment Ecosystem</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22><text y=%2226%22 font-size=%2224%22>🌾</text></svg>">
+</head>
+<body class="p-3 sm:p-6 lg:p-8">
+
+  <!-- TOP APP BAR -->
+  <header class="max-w-7xl mx-auto glass-card p-4 sm:p-5 mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-2xl shadow-md text-white">
+        🌾
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="brand-font text-2xl sm:text-3xl font-extrabold text-orange-700 tracking-tight">SHAKTI SETU AI</h1>
+          <span class="bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-emerald-300">
+            ● Multi-Agent Live
+          </span>
+          <span class="bg-indigo-100 text-indigo-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-indigo-300">
+            📡 BLE Mesh Armed
+          </span>
+        </div>
+        <p id="brand-subtitle" class="text-xs sm:text-sm text-slate-600 font-medium">
+          Agentic AI Rural Women Entrepreneurship & Hyperlocal Safe Fulfilment Ecosystem
+        </p>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="flex items-center flex-wrap gap-2.5">
+      <button onclick="toggleLanguage()" id="lang-toggle-btn" class="px-3.5 py-2 rounded-xl bg-white border border-orange-200 text-xs font-semibold text-slate-700 shadow-sm hover:bg-orange-50 transition">
+        🇮🇳 हिन्दी
+      </button>
+
+      <button onclick="runFullSimulation()" id="btn-demo-simulation" class="px-4 py-2 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 text-white text-xs font-bold shadow-md hover:opacity-95 transition flex items-center gap-2">
+        <span>⚡ Run Full Multi-Agent Simulation</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION TABS -->
+  <nav class="max-w-7xl mx-auto mb-6 flex overflow-x-auto gap-2 p-1.5 bg-orange-100/60 rounded-2xl border border-orange-200">
+    <button onclick="switchTab('didi')" id="btn-tab-didi" class="nav-tab-btn flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold bg-orange-600 text-white shadow-md transition whitespace-nowrap">
+      👩‍🌾 SHG Didi Portal
+    </button>
+    <button onclick="switchTab('saathi')" id="btn-tab-saathi" class="nav-tab-btn flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-orange-50 transition whitespace-nowrap">
+      📱 Digital Saathi Portal
+    </button>
+    <button onclick="switchTab('suraksha')" id="btn-tab-suraksha" class="nav-tab-btn flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-orange-50 transition whitespace-nowrap">
+      🛡️ Suraksha Setu (Safety & Signal Grid)
+    </button>
+    <button onclick="switchTab('admin')" id="btn-tab-admin" class="nav-tab-btn flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-orange-50 transition whitespace-nowrap">
+      📊 AI Command Center (Judges)
+    </button>
+  </nav>
+
+  <!-- MAIN VIEWPORT -->
+  <main class="max-w-7xl mx-auto">
+
+    <!-- ================= TAB 1: SHG DIDI VIEW ================= -->
+    <div id="tab-content-didi" class="tab-content space-y-6">
+      
+      <!-- Welcome Profile Card -->
+      <div class="glass-card p-6 border-l-8 border-orange-600 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 rounded-full bg-orange-200 border-2 border-orange-400 flex items-center justify-center text-3xl shadow">
+            🧕
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-800">Sunita Devi (Group President & Crafter)</h2>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold">
+                Trust Index: 99.2%
+              </span>
+            </div>
+            <p class="text-sm text-slate-600 mt-0.5">
+              Maa Durga Mahila Swavalamban Samooh • Sonpur Rural Cluster, Bihar
+            </p>
+            <p class="text-xs text-orange-700 font-medium mt-1">
+              Verified UPI: <span class="font-mono">sunita.shg@okhdfcbank</span> | Total Earnings: <strong class="text-emerald-700 font-bold">₹14,850.00</strong>
+            </p>
+          </div>
+        </div>
+
+        <button onclick="speakText('Welcome Sunita Didi! You have 2 pending production tasks and active safe delivery protection.')" class="px-4 py-2.5 rounded-xl bg-orange-100 hover:bg-orange-200 text-orange-800 text-xs font-bold flex items-center gap-2 border border-orange-300 shadow-sm transition">
+          <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+          <span>Listen in Voice (Audio)</span>
+        </button>
+      </div>
+
+      <!-- Tasks and Earnings -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Mera Kaam -->
+        <div class="glass-card p-6">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-orange-100">
+            <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+              <span class="text-orange-600 text-xl">📋</span> My Assigned Production Tasks
+            </h3>
+            <span class="text-xs bg-orange-100 text-orange-800 font-semibold px-2.5 py-1 rounded-lg">
+              Equitable AI Allocation
+            </span>
+          </div>
+
+          <div id="didi-tasks-container" class="space-y-3">
+            <!-- Dynamic tasks -->
+          </div>
+        </div>
+
+        <!-- Meri Kamai -->
+        <div class="glass-card p-6">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-orange-100">
+            <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+              <span class="text-emerald-600 text-xl">💰</span> Transparent Earnings & Receipts (Zero Dispute)
+            </h3>
+            <span class="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-1 rounded-lg">
+              Cryptographic Ledger
+            </span>
+          </div>
+
+          <div id="didi-receipts-container" class="space-y-3">
+            <!-- Dynamic receipts -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= TAB 2: DIGITAL SAATHI VIEW ================= -->
+    <div id="tab-content-saathi" class="tab-content hidden space-y-6">
+      
+      <!-- Saathi Profile Banner -->
+      <div class="glass-card p-6 border-l-8 border-teal-600 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 rounded-full bg-teal-100 border-2 border-teal-500 flex items-center justify-center text-3xl shadow">
+            🧑‍💼
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 id="saathi-name-badge" class="text-xl sm:text-2xl font-bold text-slate-800">Rahul Sharma (Digital Saathi)</h2>
+              <span class="px-2.5 py-0.5 rounded-full bg-teal-100 text-teal-800 text-xs font-semibold">
+                Verified Rural Youth Partner
+              </span>
+            </div>
+            <p class="text-sm text-slate-600 mt-0.5">
+              WhatsApp Order Intake, Mobile Cataloging, Fulfilment Tracking & Motorbike Emergency Responder
+            </p>
+            <p class="text-xs text-teal-800 font-semibold mt-1">
+              Saathi Digital Wallet: <span id="saathi-wallet-badge" class="font-mono text-emerald-700 text-sm font-bold">₹4,250.00</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="text-right">
+          <span class="text-xs text-slate-500 block">Active Escort Corridor</span>
+          <span class="text-sm font-bold text-orange-600">1 Delivery Protected</span>
+        </div>
+      </div>
+
+      <!-- Order Intake & Pipeline -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Unstructured Order Intake -->
+        <div class="glass-card p-6">
+          <h3 class="text-lg font-bold text-slate-800 mb-1 flex items-center gap-2">
+            <span class="text-teal-600">📥</span> Unstructured Order Intake (WhatsApp / Audio Note)
+          </h3>
+          <p class="text-xs text-slate-500 mb-4">
+            Input unstructured text or transcribed audio. Multi-agents extract quantities, check stock, and allocate work.
+          </p>
+
+          <textarea id="order-text-input" rows="4" class="w-full p-3.5 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-orange-500 focus:outline-none" placeholder="e.g. Hello Didi, we need 20 packets of mango pickle and 10 kg organic turmeric for our restaurant by 27 Nov at Sonpur Chowk..."></textarea>
+
+          <!-- Quick Samples -->
+          <div class="mt-2 flex flex-wrap gap-1.5">
+            <button onclick="setSampleOrder('15 packets of Mango Pickle needed for Maurya Hotel near Sonpur by 28 Nov.')" class="text-[11px] bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-lg text-slate-700">
+              ⚡ 15 Pkts Mango Pickle
+            </button>
+            <button onclick="setSampleOrder('20 kg organic turmeric and 10 jars lemon pickle at Sonpur High School gate.')" class="text-[11px] bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-lg text-slate-700">
+              ⚡ 20kg Turmeric + Pickle
+            </button>
+            <button onclick="setSampleOrder('10 pieces handloom dupatta and 12 handcrafted jute bags.')" class="text-[11px] bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-lg text-slate-700">
+              ⚡ Handloom Dupatta & Bags
+            </button>
+          </div>
+
+          <button onclick="handleCreateOrderSubmit()" class="mt-4 w-full py-3 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white rounded-xl font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>Process Order via Agentic Pipeline</span>
+          </button>
+        </div>
+
+        <!-- Orders Pipeline -->
+        <div class="glass-card p-6">
+          <h3 class="text-lg font-bold text-slate-800 mb-1 flex items-center gap-2">
+            <span class="text-orange-600">📦</span> Active Orders & Transparent Settlement
+          </h3>
+          <p class="text-xs text-slate-500 mb-4">
+            Orders monitored by Fulfilment Agent. Settle with 1-click once delivered.
+          </p>
+
+          <div id="saathi-orders-container" class="space-y-3">
+            <!-- Dynamic orders -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= TAB 3: SURAKSHA SETU (SAFETY & SIGNALS GRID) ================= -->
+    <div id="tab-content-suraksha" class="tab-content hidden space-y-6">
+      
+      <!-- Top Banner -->
+      <div id="suraksha-status-banner" class="p-4 bg-emerald-500 text-white rounded-2xl shadow-sm flex items-center justify-between">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Left: Emergency Calling & Duress Triggers -->
+        <div class="glass-card p-6 lg:col-span-1 border-t-4 border-red-600 space-y-5">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-1 flex items-center gap-2">
+              <span class="text-red-600">🚨</span> Multi-Signal Emergency Response
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Equipped with vocal biometric duress triggers, offline BLE peer beacons, and automated safety calls.
+            </p>
+          </div>
+
+          <!-- Big Emergency SOS Button -->
+          <button onclick="handleTriggerDuress('Help')" class="w-full py-6 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-2xl font-black text-lg shadow-xl emergency-pulse transition flex flex-col items-center justify-center gap-1.5">
+            <span class="text-3xl">🆘</span>
+            <span>EMERGENCY SOS</span>
+            <span class="text-[11px] font-normal opacity-90">1-Tap or Triple Power Button Press</span>
+          </button>
+
+          <!-- Voice Duress Keyword Tester -->
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <h4 class="text-xs font-bold text-slate-800 mb-1.5 flex items-center gap-1.5">
+              <span>🎙️</span> Spoken Duress Triggers (Voice Distress)
+            </h4>
+            <p class="text-[11px] text-slate-500 mb-2.5">
+              Select or speak a keyword. Works even if the phone screen is locked:
+            </p>
+            <div class="flex flex-col gap-1.5">
+              <button onclick="handleTriggerDuress('Help')" class="w-full text-left px-3 py-2 bg-red-50 hover:bg-red-100 text-red-700 text-xs font-semibold rounded-lg border border-red-200 flex justify-between items-center">
+                <span>"Help" / "Bachao"</span>
+                <span class="text-[10px] bg-red-200 px-1.5 py-0.5 rounded">Direct SOS</span>
+              </button>
+              <button onclick="handleTriggerDuress('The tea is getting cold')" class="w-full text-left px-3 py-2 bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-semibold rounded-lg border border-purple-200 flex justify-between items-center">
+                <span>"The tea is getting cold"</span>
+                <span class="text-[10px] bg-purple-200 px-1.5 py-0.5 rounded">Stealth Code</span>
+              </button>
+              <button onclick="handleTriggerDuress('Wrong delivery address')" class="w-full text-left px-3 py-2 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded-lg border border-amber-200 flex justify-between items-center">
+                <span>"Wrong delivery address"</span>
+                <span class="text-[10px] bg-amber-200 px-1.5 py-0.5 rounded">Coerced Phrase</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Ambient Sensor Anomaly Trigger -->
+          <div class="p-3.5 bg-amber-50 rounded-xl border border-amber-200">
+            <h4 class="text-xs font-bold text-amber-900 mb-1 flex items-center gap-1.5">
+              <span>📡</span> Environmental Ambient Anomaly
+            </h4>
+            <p class="text-[11px] text-slate-600 mb-2">
+              Detects sudden scream audio decibels (>90 dB) or phone drop impact:
+            </p>
+            <button onclick="handleSimulateAmbientAnomaly()" class="w-full py-2 bg-amber-200 hover:bg-amber-300 text-amber-900 font-bold text-xs rounded-lg shadow-sm transition">
+              Simulate Scream / Decibel Spike (96.4 dB)
+            </button>
+          </div>
+
+          <!-- Priority Safety Automated Call Button -->
+          <div class="p-3.5 bg-indigo-50 rounded-xl border border-indigo-200">
+            <h4 class="text-xs font-bold text-indigo-900 mb-1 flex items-center gap-1.5">
+              <span>📞</span> Automated Priority Verification Call
+            </h4>
+            <p class="text-[11px] text-slate-600 mb-2">
+              System initiates an autonomous verification phone call:
+            </p>
+            <button onclick="handleTriggerPriorityCall('TRIP-042')" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-lg shadow-sm transition">
+              Dial Priority Check-in Call
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Center & Right: Hyperlocal Landmark Navigation, BLE Mesh & Responders -->
+        <div class="glass-card p-6 lg:col-span-2 space-y-5">
+          
+          <div class="flex items-center justify-between pb-3 border-b border-orange-100">
+            <div>
+              <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                <span class="text-teal-600">🗺️</span> Zero-Map Landmark Navigation & BLE Mesh Radar
+              </h3>
+              <p class="text-xs text-slate-500">
+                Landmark-based rural geography with 100m peer-to-peer Bluetooth distress broadcast.
+              </p>
+            </div>
+            <span class="text-xs bg-indigo-100 text-indigo-800 font-semibold px-2.5 py-1 rounded-lg">
+              BLE Mesh Armed (100m)
+            </span>
+          </div>
+
+          <!-- Landmark Display Box -->
+          <div class="p-5 bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl shadow-inner">
+            <div class="text-xs text-orange-400 font-mono font-semibold mb-1 uppercase tracking-wider">
+              ● Active Protected Escort Location
+            </div>
+            <div id="current-landmark-text" class="text-xl sm:text-2xl font-black text-white">
+              Rampur Mod, In front of Sacred Peepal Tree (Sonpur)
+            </div>
+            <div class="mt-3 flex items-center gap-4 text-xs text-slate-300">
+              <span>Distance Covered: <strong>1.8 km</strong></span>
+              <span>•</span>
+              <span>Est. Remaining: <strong>12 mins</strong></span>
+              <span>•</span>
+              <span class="text-emerald-400 font-semibold">Offline BLE Beacon: ACTIVE</span>
+            </div>
+          </div>
+
+          <!-- Ambient Signals Feed -->
+          <div>
+            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+              Environmental Acoustic & Sensor Telemetry
+            </h4>
+            <div id="ambient-signals-list" class="space-y-2">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Nearest Digital Saathis List -->
+          <div>
+            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+              Nearby Digital Saathi First Responders (Within 2km)
+            </h4>
+            <div id="responders-list" class="space-y-2.5">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= TAB 4: AGENTIC COMMAND CENTER (JUDGES VIEW) ================= -->
+    <div id="tab-content-admin" class="tab-content hidden space-y-6">
+      
+      <!-- Metrics Row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="glass-card p-4 text-center">
+          <span class="text-xs text-slate-500 font-medium block">System Trust Score</span>
+          <span id="metric-trust-score" class="text-2xl sm:text-3xl font-black text-emerald-600">99.4%</span>
+          <span class="text-[10px] text-emerald-700 block mt-0.5">0% Payment Disputes</span>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <span class="text-xs text-slate-500 font-medium block">Active Orders</span>
+          <span id="metric-active-orders" class="text-2xl sm:text-3xl font-black text-orange-600">1</span>
+          <span class="text-[10px] text-slate-500 block mt-0.5">Fulfilment in Progress</span>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <span class="text-xs text-slate-500 font-medium block">Pending Tasks</span>
+          <span id="metric-pending-tasks" class="text-2xl sm:text-3xl font-black text-amber-600">2</span>
+          <span class="text-[10px] text-slate-500 block mt-0.5">Equitably Distributed</span>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <span class="text-xs text-slate-500 font-medium block">Distress Alarms</span>
+          <span id="metric-emergencies" class="text-2xl sm:text-3xl font-black text-rose-600">0</span>
+          <span class="text-[10px] text-emerald-700 block mt-0.5">All Escorts Safe</span>
+        </div>
+      </div>
+
+      <!-- Multi-Agent Orchestration Visualizer -->
+      <div class="glass-card p-6">
+        <h3 class="text-lg font-bold text-slate-800 mb-1 flex items-center gap-2">
+          <span class="text-orange-600">🧠</span> Multi-Agent Orchestration Architecture
+        </h3>
+        <p class="text-xs text-slate-500 mb-6">
+          Autonomous specialized AI agents collaborating from raw order intake to safe delivery escort and cryptographic revenue settlement.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+          
+          <div class="agent-node active-agent">
+            <div class="text-xl mb-1">🤖</div>
+            <h5 class="text-xs font-bold text-orange-800">1. Order Agent</h5>
+            <p class="text-[11px] text-slate-600 mt-1">Parses unstructured voice/text into structured product entities and landmark coordinates.</p>
+          </div>
+
+          <div class="agent-node active-agent">
+            <div class="text-xl mb-1">⚖️</div>
+            <h5 class="text-xs font-bold text-orange-800">2. Fulfilment Agent</h5>
+            <p class="text-[11px] text-slate-600 mt-1">Balances workload fairly across women crafters to prevent elite capture.</p>
+          </div>
+
+          <div class="agent-node active-agent">
+            <div class="text-xl mb-1">🛡️</div>
+            <h5 class="text-xs font-bold text-orange-800">3. Suraksha Agent</h5>
+            <p class="text-[11px] text-slate-600 mt-1">Acoustic scream detection, voice duress keywords, and BLE mesh responder dispatch.</p>
+          </div>
+
+          <div class="agent-node active-agent">
+            <div class="text-xl mb-1">💳</div>
+            <h5 class="text-xs font-bold text-orange-800">4. Payment Agent</h5>
+            <p class="text-[11px] text-slate-600 mt-1">Mathematical split: 35% raw material, 5% youth fee, remaining 100% net to Didi with SHA-256 hash.</p>
+          </div>
+
+          <div class="agent-node active-agent">
+            <div class="text-xl mb-1">👁️</div>
+            <h5 class="text-xs font-bold text-orange-800">5. Watchdog Agent</h5>
+            <p class="text-[11px] text-slate-600 mt-1">Real-time systemic health monitoring and predictive bottleneck detection.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Agent Activity Stream -->
+      <div class="glass-card p-6">
+        <div class="flex items-center justify-between mb-3 pb-2 border-b border-orange-100">
+          <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
+            <span class="text-emerald-600">⚡</span> Live Agent Reasoning & Activity Stream
+          </h3>
+          <span class="text-[11px] font-mono text-slate-500">Real-time Feed</span>
+        </div>
+
+        <div id="agent-logs-stream" class="space-y-2 max-h-72 overflow-y-auto pr-1">
+          <!-- Dynamic Agent Logs -->
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- MODAL: PRIORITY AUTOMATED SAFETY CALL SIMULATION -->
+  <div id="priority-call-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl border-4 border-indigo-500 animate-bounce-subtle">
+      <div class="w-20 h-20 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 animate-pulse">
+        📞
+      </div>
+      <span class="text-[11px] font-bold uppercase tracking-wider bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">
+        Incoming Automated Safety Call
+      </span>
+      <h3 class="text-xl font-black text-slate-900 mt-2">SHAKTI SETU GUARDIAN</h3>
+      <p class="text-xs text-slate-500 font-mono mt-0.5">+91 1800-SETU-SAFE</p>
+
+      <div class="my-4 p-3.5 bg-slate-50 rounded-2xl border text-xs text-slate-600 text-left leading-relaxed">
+        <strong>Automated IVR Script:</strong><br>
+        <em>"Didi, this is an automated safety call from Shakti Setu. Press 1 to confirm you are safe. If you cannot speak or are in distress, remain silent."</em>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 mt-4">
+        <button onclick="closeCallModal(1)" class="py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-xs shadow">
+          Press [1]: I am Safe
+        </button>
+        <button onclick="closeCallModal(0)" class="py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-xs shadow">
+          Remain Silent / In Trouble
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="max-w-7xl mx-auto mt-8 text-center text-xs text-slate-500 py-4 border-t border-orange-200">
+    <p><strong>SHAKTI SETU AI</strong> • GAVS Hackathon | Tech4Bharat • Theme: Youth and Women (Problem 8.1)</p>
+    <p class="mt-1 text-[11px]">Empowering Self-Help Groups with Agentic AI, Local Youth Employment, and Multi-Signal Safe Fulfilment.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
