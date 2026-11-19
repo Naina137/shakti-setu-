@@ -9,6 +9,13 @@ Unified backend API serving:
 """
 
 import os
+import sys
+
+# Ensure current directory is in sys.path for root execution (Render / Cloud)
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+if CURRENT_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_DIR)
+
 from typing import Dict, Any, List
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware

@@ -8,8 +8,15 @@ into transparent, safe, and highly protected rural entrepreneurship.
 import hashlib
 import json
 import re
+import os
+import sys
 from datetime import datetime
 from typing import List, Dict, Any, Tuple
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+if CURRENT_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_DIR)
+
 from models import (
     Order, OrderStatus, OrderItem, ProductionTask, TaskStatus,
     SHGMember, DigitalSaathi, DeliveryTrip, DeliverySafetyStatus,
